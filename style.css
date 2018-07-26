@@ -1,0 +1,373 @@
+body{
+	/* default font style */
+  font-family: Arial;
+  font-size: 36px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #383838;  
+}
+/* styles for main container */
+.container {
+  display:flex;
+  justify-content: left;
+  margin: 2%;
+  width: 90%;
+  height: 90vh;
+  min-height: 620px;
+  border-radius: 42.5px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 30px #f5f8f9;
+}
+
+/* styles for side panel */
+.sideDisplay{
+  border-radius: 42.5px  0  0 42.5px;
+  width: 40%;
+  height: 90vh;
+  min-height: 620px;
+  background-color: #ffd500;
+  z-index: 3;
+}
+
+/* image style */
+.displayImage {
+  margin: 1.6em auto 1em;
+  width: 6em;
+  height: 6em;
+  object-fit: contain;
+  opacity: 0.8;  
+}
+
+/* heading styles */
+.mainHeading {
+  margin:auto;
+  font-size: 24px;
+}
+/* paragraph styles */
+.sideParagraph {
+  margin: 2em 3em;  
+  font-size: .5em;  
+  line-height: 1.53;
+ }
+/* button to dislay or remove slide */
+ .displayButton {
+  margin: 0 auto;
+  width: 3em;
+  height: 3em;
+  object-fit: contain;
+  opacity: 0.8;
+   transition: all 250ms ease-in-out;
+  -moz-transition: all 250ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;  
+}
+/* class for ease-in-out */
+.fade:hover{
+  opacity: 1;
+  transition: opacity 250ms ease-in-out;
+  -moz-transition: opacity 250ms ease-in-out;
+  -webkit-transition: opacity 250ms ease-in-out;
+}
+/* styles for the slide content */
+.SlideContent{
+  z-index: 1;
+  position: absolute;
+  left:15%;   
+  width: 0%;
+  height: 90vh;
+  min-height: 620px;
+  overflow: hidden;
+  border-radius: 42.5px;
+  background-color: #ff9200;
+   transition: all 250ms ease-in-out;
+  -moz-transition: all 250ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+}
+/* shows the slide */
+.showSlide{   
+  width: 77%;
+}
+/*style for slide heading */
+.SlideHeading {
+  width:40%;    
+  margin:5% 40%;  
+  font-size: 1.2em;
+  font-weight: bold; 
+  text-align: left; 
+  color: #383838;
+}
+/* style for slide paragraph */
+.SlideParagraph {  
+  width:40%; 
+  margin:0 40%;  
+  font-size: 0.5em; 
+  line-height: 1.53;  
+  text-align: left;
+  color: #383838;
+}
+/*rotate button when clicked */
+.dispalyButtonRotate{
+  transform: rotate(180deg);  
+}
+
+/* form styles */
+.formDisplay{  
+  padding:0.2em;
+  font-size: .35em;
+  font-weight: normal;
+  text-align: left;
+  color: #373d40;  
+  vertical-align: middle;
+  min-height: 620px;
+}
+.formLayout{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 0.1em .5em;
+  padding: 1.2em;
+  width: 100%;  
+} 
+
+/* vertical center align text */
+.formLayout label{  
+  margin :auto .7em;
+}
+/* add dot for requierd field */
+.requiredIndicator::before {
+  content: '';
+  position: relative;
+  top: -0.9em;
+  left: -0.5em;
+  display:inline-block; 
+  width: 0.6em;
+  height: 0.6em;
+  border-radius: 50%;
+  background: #373d40;
+}
+/*remove the margin form the required filed to show in line */
+.formLayout label.requiredIndicator {
+  margin: auto 0 ;
+}
+/* add error message after required filed */
+input[type=email]:invalid{
+  box-shadow: none;
+  border:  1px solid transparent;
+}
+/*hides error message text */
+.hideRequired{  
+  margin :0;
+  font-size: 0.8em;
+  text-align: right;
+  color:transparent;
+}
+/*show error message text */
+.showRequired{  
+  color:#ff9200;
+}
+
+/*change dot color */
+.requiredIndicatorError::before {  
+  background: #ff9200;
+}
+
+/* Change input style */
+input[type=text],input[type=email],input[type=date] {
+    font-family: HelveticaNeue;
+    font-weight: 500;
+    color: #373d40;
+    background-color: rgba(245, 248, 249, 0.3);
+    width: 100%;
+    padding: 1.4em 0.6em;
+    margin: 0.6em;
+    border: solid 1px #cad7dd;
+    border-radius: 5.3px;
+    box-sizing: border-box;
+    cursor:pointer;  
+    border: solid 1px transparent;
+    -webkit-transition: all 250ms ease-in;
+     -moz-transition: all 250ms ease-in;
+          transition: all 250ms ease-in; 
+}
+/*add border on focus */
+input[type=text]:focus,input[type=email]:focus {
+    border: solid 1px #cad7dd;
+}
+/* add image to date field */
+input#dateInput {
+    color: #b1bfcd;
+    background: url(img/Calander.svg) no-repeat 98% ;
+}
+/*error for for input field */
+.formLayout input.error{
+  border :1px solid #ff9200;
+  color: #ff9200;
+}
+
+/* remove default readio buttons */
+.radio-selectors input{    
+    -webkit-appearance:none;
+       -moz-appearance:none;
+            appearance:none;
+}
+/* default radio button images */
+.Male{
+  background:url(img/Male.svg);
+}
+.Female{
+  background:url(img/Female.svg);
+}
+.Classic{
+  background:url(img/Card.svg); 
+}
+.Silver{
+  background:url(img/Card.svg);
+}
+.Gold{
+  background:url(img/Card.svg);
+}
+/*group radio buttons with text */
+span{
+  display: inline-block; 
+  padding: 1em 0;
+}
+/*display radio button text center */
+label{
+  vertical-align: middle;
+}
+/* default styles for radio buttons */
+.gender, .membership{ 
+  background-repeat:no-repeat;
+  display:inline-block;
+  background-position: center;
+  cursor:pointer;  
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  border: 1.2px solid transparent; /* added to not resize when hovering over ellement */ 
+  background-color: #f5f8f9; 
+  -webkit-transition: all 250ms ease-in;
+     -moz-transition: all 250ms ease-in;
+          transition: all 250ms ease-in;    
+}
+/* handel hover for radio buttons if not checked */
+.Male:hover,.Female:hover,.Classic:hover, .Silver:hover, .Gold:hover{
+  border: 1.2px solid #b3c1ce;
+  -webkit-transition: all 250ms ease-in;
+       -moz-transition: all 250ms ease-in;
+            transition: all 250ms ease-in; 
+}
+/* handel hover for radio buttons if checked */
+.radio-selectors input:checked + .Male:hover,
+.radio-selectors input:checked +.Female:hover,
+.radio-selectors input:checked +.Classic:hover,
+.radio-selectors input:checked + .Silver:hover,
+ .radio-selectors input:checked +.Gold:hover{  
+  border: 1.2px solid #f5f8f9;
+  -webkit-transition: all 250ms ease-in;
+       -moz-transition: all 250ms ease-in;
+            transition: all 250ms ease-in; 
+}
+
+/* change image if radio button is checked */
+.radio-selectors input:checked + .Male {
+  background:url(img/Male-hover.svg); 
+}
+.radio-selectors input:checked + .Female {
+  background:url(img/Female-hover.svg); 
+}
+.radio-selectors input:checked + .Classic{
+  background:url(img/Card-hover.svg);
+}
+.radio-selectors input:checked + .Silver {
+  background:url(img/Card-hover.svg); 
+}
+.radio-selectors input:checked + .Gold {
+  background:url(img/Card-hover.svg); 
+}
+/* add styles if radio button is checked */
+.radio-selectors input:checked + .Male ,
+.radio-selectors input:checked + .Female,
+.radio-selectors input:checked + .Classic,
+.radio-selectors input:checked + .Silver,
+.radio-selectors input:checked + .Gold{
+  background-repeat:no-repeat;
+  display:inline-block;
+  background-position: center; 
+  background-color: #b1bfcd;
+  -webkit-transition: background-color 250ms ease-in;
+       -moz-transition: background-color 250ms ease-in;
+            transition: background-color 250ms ease-in;
+}
+/* style buttons for form */
+.button {
+  margin: 1em 0.2em;
+  width: 13em;
+  height: 3em;
+  border-radius: 5.3px;
+  font-size: 1.3em;
+}
+.cancelButton {
+  background-color: #cad7dd;
+  color: #373d40;
+}
+.saveButton {
+    background-color: #49c8a8;
+    color:#fff;
+}
+/* change layout for tablets and phones */
+@media only screen and (max-width: 1024px) {
+  body{margin:0;}
+  /* change display to fit screen */  
+  .container,.sideDisplay,.formLayout {
+    display :block;
+    border-radius: 0;
+    margin:0;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  /* rotate buttun to point down */
+  .displayButton{
+    transform: rotate(90deg);
+  }
+  /*change column to 1 */
+  .formLayout{
+    grid-template-columns: 1fr;
+    grid-gap: 1.1em .5em;
+    padding: 1.4em;
+    width: 90%;  
+  }
+  /* change button size */
+  .button {
+      width: 100%
+  }  
+  /*change slide for smaller screen sizes */
+  .SlideContent{
+    position: absolute;  
+    left:0;
+    width: 100%;
+    height: 0;
+    min-height: 0; /* removes min height */
+    overflow: hidden;
+    border-radius: 0;
+  }
+  /* shows the slide */
+  .showSlide{  
+    height: auto;
+  }
+   /* style for slide paragraph */
+  .SlideHeading ,.SlideParagraph {  
+    width:80%;    
+    margin:5% 5%;  
+  }
+  .SlideParagraph {       
+    padding-bottom: 100%; /* fill rest of display with slider */
+  }
+  /*rotate button to face up */
+  .dispalyButtonRotate{
+    transform: rotate(-90deg) ;  
+  }
+}

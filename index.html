@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Platform45 Front End Challenge</title>
+	<!-- add stylesheet -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<!-- container for form -->
+	<div class='container'>
+		<!-- Side display top for mobile and tablet -->
+		<div class='sideDisplay'>
+			<img src='img/User.svg' class='displayImage fade' alt='User image'>
+			<h1 class='mainHeading'>Front-end challenge!</h1>
+			<p class='sideParagraph'>This is a design that you will need to code up and impress us.</p>
+			<img src='img/slide.svg' id='displaySlide' class='displayButton fade' alt='Button to display slide'>
+		</div>
+		<!-- slide content -->
+		<div id='SlideDisplay'class='SlideContent'>
+			<h2 class='SlideHeading'>My world today</h2>
+			<p class='SlideParagraph'>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. <strong><u>View all days</u></strong> eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat</p>
+		</div>
+		<!-- form elements -->
+		<div class='formDisplay'>
+			<form class='formLayout'>
+				 <label>Name</label> 
+				 <input type="text" name="firstName" placeholder="Your name">
+				 <label>Gender</label>		
+				 <div class="radio-selectors">        			
+	        			<span><input id="Male" type="radio" name="gender" value="Male" />
+				        <label class="gender Male" for="Male"></label><label for="Male">Male</label></span>
+				       <span> <input id="Female" type="radio" name="gender" value="Female" />
+				       <label class="gender Female"for="Female"></label><label for="Female">Female</label></span>
+    			</div>	
+				<label>Date of Birth</label><input type="text" id='dateInput' name="DateOfBirth"  placeholder="01/02/1983">
+				<label id='emailLabel' class='requiredIndicator'>Email</label>
+				<input type="email" id='emailInput' name="email" placeholder="email@example.com" required  >
+				<p></p><p id='requiredText' class='hideRequired'>Invalid email address</p>
+				<label>Mobile</label>
+				<input type='text' id='MobileInput' name='Mobile' placeholder="+91 98765 43210">
+				<label>Customer ID</label>
+				<input type='text' id='customerInput' name='CustomerId' placeholder="576802-ERD0348 45">
+				<label>Membership</label>
+				<div class="radio-selectors">
+						<span><input id='Classic' type="radio" name="membership" value="Classic">
+						<label class="membership Classic" for="Classic"></label><label>Classic</label></span>
+						<span><input id='Silver' type="radio" name="membership" value="Silver">
+						<label class="membership Silver" for="Silver"></label><label>Silver</label></span>
+						<span><input id='Gold' type="radio" name="membership" value="Gold">
+						<label class="membership Gold" for="Gold"></label><label>Gold</label></span>
+				</div>
+				<br><div>
+				<input type="reset" id='cancelButton' value='CANCEL' class='button cancelButton'><input type="submit" value="SAVE" class='button saveButton'>
+			</div>
+			</form >
+		</div>
+	</div>
+<!-- add javascript file -->
+<script type="text/javascript" src='script.js'></script>
+</body>
+</html>
